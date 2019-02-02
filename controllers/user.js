@@ -31,7 +31,7 @@ function getUser(req, res,) {
   });
 }
 
-function addUser(req, res,) {
+/* function addUser(req, res,) {
   if (!req.body._id) {
     const newUser = new User({
       name: req.body.name,
@@ -47,7 +47,7 @@ function addUser(req, res,) {
     User.update({_id: req.body._id}, { $set: {status: req.body.status}},
         () => { res.send({success: true}); });
   }
-}
+} */
 
 function removeUser(req, res) {
   User.deleteOne({_id: req.params._id}, function () {
